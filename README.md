@@ -1,2 +1,10 @@
-# task-7
-Image resizing using Pillow
+\# Batch Image Resizer
+
+
+
+This project provides a Python script designed to automate the process of resizing multiple images within a specified folder. Utilizing the Pillow library, the script reads all supported image files, resizes them to a predefined resolution while maintaining high image quality using the Resampling.LANCZOS method, and saves the processed images to a designated output directory. The implementation includes folder management and error handling to ensure robustness and ease of use. This tool streamlines bulk image resizing tasks, saving time and ensuring consistency across image collections.
+
+
+
+
+
