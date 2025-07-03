@@ -14,8 +14,10 @@ for filename in os.listdir(input_folder):
         try:
             with Image.open(input_path) as img:
                 img_resized = img.resize(resize_dimensions, Image.Resampling.LANCZOS)
-                output_path = os.path.join(output_folder, filename)
-                img_resized.save(output_path)
-                print(f"Resized and saved: {filename}")
+                base_name, ext = os.path.splitext(filename)
+                new_filename = f"{base_name}_resized.jpg"
+                output_path = os.path.join(output_folder, new_filename)
+                img_resized.convert('RGB').save(output_path, 'JPEG')
+                print(f"Resized and saved: {new_filename}")
         except Exception as e:
             print(f"Error processing {filename}: {e}")
